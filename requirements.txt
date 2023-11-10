@@ -162,7 +162,6 @@ requests-toolbelt
 rfc3339-validator
 rich
 rich-argparse
-rpds-py
 scikit-learn
 scipy
 Send2Trash
