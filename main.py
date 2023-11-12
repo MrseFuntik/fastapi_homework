@@ -106,6 +106,7 @@ def create_dog(json_dog: Dog):
         primary_keys.append(dog.pk)
     if json_dog.pk not in primary_keys:
         dogs_db[json_dog.pk] = Dog(name=json_dog.name, pk=json_dog.pk, kind=json_dog.kind)
+        return Dog(name=json_dog.name, pk=json_dog.pk, kind=json_dog.kind)
     else:
         raise HTTPException(status_code=409,
                             detail='The specified PK already exists.')
